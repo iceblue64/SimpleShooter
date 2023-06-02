@@ -21,12 +21,11 @@ public:
 	virtual void GameHasEnded(class AActor* EndGameFocus = nullptr, bool bIsWinner = false) override;
 
 protected:
-	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 private:
 	UPROPERTY(EditAnywhere)
-		TSubclassOf<class UUserWidget> LoseScreenClass; // TSubclassOf = a variable that holds a ref to a class + its subclasses
+		TSubclassOf<class UUserWidget> LoseScreenClass;
 
 	UPROPERTY(EditAnywhere)
 		TSubclassOf<class UUserWidget> WinScreenClass;
